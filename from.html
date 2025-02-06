@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="from.css">
+</head>
+<body>
+  
+    </style>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form id="appointmentForm">
+            <label for="doctor">Select a Doctor:</label>
+            <select id="doctor" required>
+                <option value="">--Select--</option>
+                <option value="Dr.RAMA KRISHNA ">Dr.RAMA KRISHNA</option>
+                <option value="Dr.SANDHYA">Dr.SANDHYA</option>
+                <option value="DR.KARTHIK">Dr.KARTHIK</option>
+            </select>
+
+            <label for="date">Choose a Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="timeSlot">Choose a Time Slot:</label>
+            <select id="timeSlot" required>
+                <option value="">--Select--</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+            </select>
+
+            <button type="submit">Confirm Appointment</button>
+        </form>
+<div id="confirmation" class="hidden">
+            <h2>Confirm Your Appointment</h2>
+            <p><strong>Doctor:</strong> <span id="confirmDoctor"></span></p>
+            <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+            <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+            <button id="submitBooking">Submit Booking</button>
+        </div>
+
+        <div id="successMessage" class="hidden">
+         
+        <h2>Appointment Booked Successfully!</h2>
+        </div>
+    </div>
+   
+
+    
+</body>
+</html>

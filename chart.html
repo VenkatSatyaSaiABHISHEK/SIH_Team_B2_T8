@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SWASTHYA BHARATHI site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 20px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            font-size: 20px;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFDD57;
+            font-size: 25px;
+        }
+
+        .main-section {
+            background: #f4f4f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .main-section .content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        #background-video {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            z-index: -1; /* Place behind other content */
+            object-fit: cover;
+        }
+
+        .main-section p {
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 55%; 
+            left: 89%;
+            width: 40%;
+            transform: translate(-70%, -70%);
+            color: rgb(14, 165, 179);
+            font-size: 2.3em; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            #background-video {
+                display: none; /* Hide video on mobile */
+            }
+
+            .overlay-text {
+                top: 50%; 
+                left: 50%;
+                width: 80%; /* Increase width for better visibility on small screens */
+                transform: translate(-50%, -50%); /* Center the overlay text */
+                font-size: 1.5em; /* Adjust text size */
+            }
+
+            .main-section h2 {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+
+            .main-section p {
+                font-size: 18px; /* Reduce paragraph font size */
+            }
+        }
+
+        /* Restore the background video and reposition overlay text when leaving mobile size */
+        @media (min-width: 769px) {
+            #background-video {
+                display: block; /* Show video on larger screens */
+            }
+
+            .overlay-text {
+                top: 55%; 
+                left: 89%;
+                width: 40%;
+                transform: translate(-70%, -70%);
+                font-size: 2.3em;
+            }
+        }
+    </style>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">SWASTHYA BHARATHI</h1>
+                <ul class="nav-links">
+                    <li class="list-1"><a href="#" class="ancar">Home</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="newarital.html">Article</a></li>
+                    <li><a href="countact.html">Contact us</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="text-1">
+        <!-- Background video -->
+        <video id="background-video" autoplay muted loop> 
+            <source src="https://cdn.pixabay.com/video/2022/09/08/130591-747868243_large.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay text -->
+        <div class="overlay-text">
+            <h2>Welcome <br>Swasthya Bharathi MultiSpeciality Hospital website</h2>
+            <br>
+            <p>We make it easy for you to book appointments with your preferred doctors at your convenience.</p>
+        </div>
+    </div>
+
+</body>
+</html>
